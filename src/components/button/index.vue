@@ -1,12 +1,21 @@
 <template>
-  <div>{{name}}</div>
+  <button @click="add">{{count}}</button>
 </template>
 
 <script>
 export default {
     data(){
         return {
-            name:111
+            count:0
+        }
+    },
+    methods:{
+        decrease(){
+            this.count-=1
+        },
+        add(){
+            this.count+=1
+            this.$emit('show',this.count)
         }
     }
 }
