@@ -1,9 +1,14 @@
 <template>
-  <button @click="add">{{count}}</button>
+  <Button @click="add">{{count}}</Button>
 </template>
 
-<script>
+
+<script >
+import Button from '../../../node_modules/view-design/src/components/button/index.js'
 export default {
+    components:{
+        Button
+    },
     data(){
         return {
             count:0
